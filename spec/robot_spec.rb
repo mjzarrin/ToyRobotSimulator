@@ -4,7 +4,6 @@ RSpec.describe "Robot" do
   testCases = Dir["testCases/*.testCase"]
 
   testCases.each { |testCase|
-    puts testCase
     it "start of testing" + testCase  do
       r = Robot.new
       finished = false
@@ -12,6 +11,8 @@ RSpec.describe "Robot" do
       desiredResult = "+"
       File.readlines(testCase).each do |command|
         if finished
+          p "finished"
+          p command
           command = "[" + r.prepareCommand(command) + "]"
           desiredResult = eval(command)
           desiredResult[-1] = desiredResult[-1].to_s
