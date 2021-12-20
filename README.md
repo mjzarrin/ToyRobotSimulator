@@ -41,8 +41,8 @@ REPORT
 
 ####Example b
 
-PLACE 0,0,NORTH
-LEFT
+PLACE 0,0,NORTH\
+LEFT\
 REPORT
 
 ##### Expected output:
