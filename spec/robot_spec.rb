@@ -1,6 +1,5 @@
 require File.expand_path('robot')
 
-
 RSpec.describe "Robot" do
   it "start of testing" do
     r = Robot.new
